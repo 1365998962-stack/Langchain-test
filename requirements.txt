@@ -3,18 +3,22 @@
 # 安装：pip install -r requirements.txt
 # ==============================================
 
-# LangChain 核心
-langchain==0.3.7
-langchain-core==0.3.18
-langchain-community==0.3.7
+# LangChain 核心（升级到 1.0+，create_agent 等新 API 需要）
+langchain>=1.0.0
+langchain-core>=1.0.0
+langchain-community>=0.3.40
+langchain-openai>=0.2.0
 
-# 向量数据库
-langchain-chroma==0.1.4
-chromadb==0.5.15
-langchain-text-splitters==0.3.2
+# 自动从 .env 加载环境变量
+python-dotenv>=1.0.0
 
-# Agent 编排
-langgraph==0.2.50
+# 向量数据库（升级到与 langchain 1.x 兼容）
+langchain-chroma>=1.1.0
+chromadb>=0.5.15
+langchain-text-splitters>=1.1.0
+
+# Agent 编排（升级到 1.2+ 以兼容 langchain 1.x）
+langgraph>=1.2.0
 
 # 前端
 streamlit==1.40.1
